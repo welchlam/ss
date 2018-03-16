@@ -1,0 +1,1 @@
+Spring boot and redis for session sharing.

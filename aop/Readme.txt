@@ -1,0 +1,1 @@
+Static proxy, dynamic proxy, cglib proxy and Spring AOP.

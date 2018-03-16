@@ -1,0 +1,1 @@
+Spring boot and active MQ for test message produce and consume.
