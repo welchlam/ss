@@ -17,8 +17,8 @@ public class RedisController {
     @RequestMapping(value = "/first", method = RequestMethod.GET)
     public Map<String, Object> firstResp (HttpServletRequest request){
         Map<String, Object> map = new HashMap<>();
-        request.getSession().setAttribute("request Url", request.getRequestURL());
-        map.put("request Url", request.getRequestURL());
+        request.getSession().setAttribute("welch_request_url", request.getRequestURL());
+        map.put("welch_request_url", request.getRequestURL());
         return map;
     }
 
@@ -26,7 +26,12 @@ public class RedisController {
     public Object sessions (HttpServletRequest request){
         Map<String, Object> map = new HashMap<>();
         map.put("sessionId", request.getSession().getId());
-        map.put("message", request.getSession().getAttribute("request Url"));
+        map.put("message", request.getSession().getAttribute("welch_request_url"));
         return map;
+    }
+
+    @RequestMapping("/test")
+    public String test(){
+        return "test";
     }
 }
